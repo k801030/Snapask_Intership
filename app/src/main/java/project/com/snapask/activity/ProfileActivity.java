@@ -18,6 +18,7 @@ import org.w3c.dom.Text;
 import project.com.snapask.R;
 import project.com.snapask.fragment.InfoFragment;
 import project.com.snapask.fragment.PaymentFragment;
+import project.com.snapask.fragment.SettingsFragment;
 
 public class ProfileActivity extends AppCompatActivity {
     RoundedImageView mUserPhoto;
@@ -55,9 +56,8 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     private class PagerAdapter extends FragmentPagerAdapter {
-        // TODO: set view setter
 
-        private String[] TITLES = {"Info", "Payment", "Setting"};
+        private String[] TITLES = {"Info", "Payment", "Settings"};
 
         public PagerAdapter(FragmentManager fm) {
             super(fm);
@@ -74,8 +74,9 @@ public class ProfileActivity extends AppCompatActivity {
                 case 0:
                     return new InfoFragment();
                 case 1:
-                case 2:
                     return new PaymentFragment();
+                case 2:
+                    return new SettingsFragment();
             }
             return null;
         }
