@@ -6,13 +6,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.makeramen.roundedimageview.RoundedImageView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
+import org.w3c.dom.Text;
 
 import project.com.snapask.R;
 import project.com.snapask.fragment.InfoFragment;
 
 public class ProfileActivity extends AppCompatActivity {
+    RoundedImageView mUserPhoto;
+    TextView mUserName;
+
     PagerSlidingTabStrip mTabs;
     ViewPager mViewPager;
     FragmentPagerAdapter mPagerAdapter;
@@ -21,6 +30,15 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+
+
+        mUserPhoto = (RoundedImageView) findViewById(R.id.user_photo);
+        mUserName = (TextView) findViewById(R.id.user_name);
+
+            // temp
+        String url = "https://pixabay.com/static/uploads/photo/2012/04/26/19/43/profile-42914_640.png";
+        ImageLoader.getInstance().displayImage(url, mUserPhoto);
 
         // Init ViewPager
         mViewPager = (ViewPager) findViewById(R.id.view_pager);

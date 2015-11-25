@@ -11,21 +11,20 @@
         android:background="#a9a9a9"
         android:padding="30dp">
         <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/info.photo"
+            android:id="@+id/user_photo"
             android:layout_width="60dp"
             android:layout_height="60dp"
             app:riv_corner_radius="30dp"
             android:scaleType="centerCrop"
-            android:background="#fff"
             android:layout_centerVertical="true"
             android:layout_marginBottom="15dp"/>
         <TextView
-            android:id="@+id/info.name"
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test"
             android:textColor="#fff"
-            android:layout_below="@id/info.photo" />
+            android:layout_below="@id/user_photo" />
 
     </RelativeLayout>
 
