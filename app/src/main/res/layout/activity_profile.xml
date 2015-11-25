@@ -33,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:textColor="@color/tab_text"
+        android:textSize="@dimen/tab_text_size"
         android:background="@color/color_primary"
         app:pstsIndicatorColor="@color/tab_indicator"
         app:pstsShouldExpand="true"
