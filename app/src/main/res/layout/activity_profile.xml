@@ -7,20 +7,24 @@
     tools:context=".ProfileActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="#ccc">
+        android:layout_height="200dp"
+        android:background="#a9a9a9"
+        android:padding="30dp">
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/info.photo"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:riv_corner_radius="30dp"
             android:scaleType="centerCrop"
-            android:background="#333"
-            android:layout_centerVertical="true"/>
+            android:background="#fff"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"/>
         <TextView
             android:id="@+id/info.name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test"
+            android:textColor="#fff"
             android:layout_below="@id/info.photo"/>
 
     </RelativeLayout>
