@@ -6,4 +6,5 @@
     <dimen name="fragment_item_info_padding">16dp</dimen>
     
     <dimen name="fragment_info_text_size">16sp</dimen>
+    <dimen name="tab_text_size">20sp</dimen>
 </resources>
