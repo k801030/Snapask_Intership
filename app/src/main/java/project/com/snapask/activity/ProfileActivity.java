@@ -17,6 +17,7 @@ import org.w3c.dom.Text;
 
 import project.com.snapask.R;
 import project.com.snapask.fragment.InfoFragment;
+import project.com.snapask.fragment.PaymentFragment;
 
 public class ProfileActivity extends AppCompatActivity {
     RoundedImageView mUserPhoto;
@@ -71,9 +72,10 @@ public class ProfileActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
+                    return new InfoFragment();
                 case 1:
                 case 2:
-                    return new InfoFragment();
+                    return new PaymentFragment();
             }
             return null;
         }

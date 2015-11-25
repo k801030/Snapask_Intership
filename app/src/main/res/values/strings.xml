@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Snapask</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="fragment.payment.card_holders_name">Card Holders Name</string>
+    <string name="fragment.payment.card_number">Card Number</string>
+    <string name="fragment.payment.start_date">Start Date</string>
+    <string name="fragment.payment.end_date">End Date</string>
+    <string name="fragment.payment.issue_number">Issue Number</string>
 </resources>
