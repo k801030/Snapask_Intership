@@ -38,10 +38,6 @@ public class ProfileActivity extends AppCompatActivity {
         mUserPhoto = (RoundedImageView) findViewById(R.id.user_photo);
         mUserName = (TextView) findViewById(R.id.user_name);
 
-            // temp
-        String url = "https://pixabay.com/static/uploads/photo/2012/04/26/19/43/profile-42914_640.png";
-        ImageLoader.getInstance().displayImage(url, mUserPhoto);
-
         // Init ViewPager
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
         mPagerAdapter = new PagerAdapter(getSupportFragmentManager());

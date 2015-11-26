@@ -42,7 +42,6 @@ public class InfoFragment extends Fragment {
         }
 
         private void init() {
-            // TODO: init base user profile
         }
 
         @Override
@@ -67,9 +66,26 @@ public class InfoFragment extends Fragment {
             }
 
             ImageView iconImage = (ImageView) view.findViewById(R.id.icon);
+            TextView contentText = (TextView) view.findViewById(R.id.content);
             TextView noteText = (TextView) view.findViewById(R.id.title);
             iconImage.setImageDrawable(getResources().getDrawable(ICONS[i]));
             noteText.setText(TITLES[i]);
+
+
+            // add fake data
+            switch (i) {
+                case 0:
+                    contentText.setText("kk801030@gmail.com");
+                    break;
+                case 1:
+                    contentText.setText("0910 405 753");
+                    break;
+                case 2:
+                    contentText.setText("NTU");
+                    break;
+                case 3:
+                    contentText.setText("Math, Phy");
+            }
 
             return view;
         }

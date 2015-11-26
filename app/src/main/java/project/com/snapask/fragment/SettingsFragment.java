@@ -66,6 +66,8 @@ public class SettingsFragment extends Fragment {
             TextView subTitle = (TextView) view.findViewById(R.id.subtitle);
             title.setText(TITLES[i]);
             subTitle.setText(SUB_TITLES[i]);
+
+
             // ImageView iconImage = (ImageView) view.findViewById(R.id.icon);
             // iconImage.setImageDrawable(getResources().getDrawable(ICONS[i]));
 
