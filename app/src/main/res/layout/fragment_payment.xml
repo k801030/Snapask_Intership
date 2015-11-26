@@ -2,42 +2,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/fragment_payment_margin"
-    android:layout_marginBottom="@dimen/fragment_payment_margin">
+    android:layout_marginTop="@dimen/fragment_payment_margin">
 
-    <LinearLayout
-        android:orientation="vertical"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/fragment_payment_form_padding">
-        <EditText
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/fragment.payment.card_holders_name"/>
+            android:padding="@dimen/fragment_payment_form_padding">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fragment.payment.card_holders_name"
+                android:background="@drawable/form_input"
+                android:textColorHint="@color/sub_text_color"
+                android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/fragment.payment.card_number"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fragment.payment.card_number"
+                android:background="@drawable/form_input"
+                android:textColorHint="@color/sub_text_color"
+                android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/fragment.payment.start_date"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/fragment.payment.end_date"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fragment.payment.end_date"
+                    android:background="@drawable/form_input"
+                    android:textColorHint="@color/sub_text_color"
+                    android:layout_marginRight="@dimen/fragment_settings_input_margin"
+                    android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/fragment.payment.issue_number"/>
-    </LinearLayout>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fragment.payment.start_date"
+                    android:background="@drawable/form_input"
+                    android:textColorHint="@color/sub_text_color"
+                    android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fragment.payment.issue_number"
+                android:background="@drawable/form_input"
+                android:textColorHint="@color/sub_text_color"
+                android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
+        android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"/>
+        android:background="@color/color_primary"
+        android:textColor="#fff"
+        android:text="Add"
+        />
 </LinearLayout>
