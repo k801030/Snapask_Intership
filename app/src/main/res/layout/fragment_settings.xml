@@ -2,9 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ListView
-        android:id="@+id/list"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </ListView>
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/fragment_settings_margin"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fragment_info_text_size"
+                android:textColor="@color/main_text_color"
+                android:text="@string/fragment.setting.notification" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fragment_info_text_size"
+                android:textColor="@color/sub_text_color"
+                android:text="@string/fragment.setting.on" />
+        </LinearLayout>
+        <Switch
+            android:id="@+id/switch_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/fragment_settings_margin"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/fragment_settings_margin"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fragment_info_text_size"
+                android:textColor="@color/main_text_color"
+                android:text="@string/fragment.setting.language" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fragment_info_text_size"
+                android:textColor="@color/sub_text_color"
+                android:text="@string/fragment.setting.english" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
 </LinearLayout>

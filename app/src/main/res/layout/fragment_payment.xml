@@ -20,7 +20,8 @@
                 android:hint="@string/fragment.payment.card_holders_name"
                 android:background="@drawable/form_input"
                 android:textColorHint="@color/sub_text_color"
-                android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
+                android:layout_marginBottom="@dimen/fragment_settings_input_margin"
+                android:textSize="@dimen/fragment_payment_form_text_size"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -28,7 +29,8 @@
                 android:hint="@string/fragment.payment.card_number"
                 android:background="@drawable/form_input"
                 android:textColorHint="@color/sub_text_color"
-                android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
+                android:layout_marginBottom="@dimen/fragment_settings_input_margin"
+                android:textSize="@dimen/fragment_payment_form_text_size"/>
 
 
             <LinearLayout
@@ -43,7 +45,8 @@
                     android:background="@drawable/form_input"
                     android:textColorHint="@color/sub_text_color"
                     android:layout_marginRight="@dimen/fragment_settings_input_margin"
-                    android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
+                    android:layout_marginBottom="@dimen/fragment_settings_input_margin"
+                    android:textSize="@dimen/fragment_payment_form_text_size"/>
 
                 <EditText
                     android:layout_width="0dp"
@@ -52,7 +55,8 @@
                     android:hint="@string/fragment.payment.start_date"
                     android:background="@drawable/form_input"
                     android:textColorHint="@color/sub_text_color"
-                    android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
+                    android:layout_marginBottom="@dimen/fragment_settings_input_margin"
+                    android:textSize="@dimen/fragment_payment_form_text_size"/>
             </LinearLayout>
 
             <EditText
@@ -61,7 +65,8 @@
                 android:hint="@string/fragment.payment.issue_number"
                 android:background="@drawable/form_input"
                 android:textColorHint="@color/sub_text_color"
-                android:layout_marginBottom="@dimen/fragment_settings_input_margin"/>
+                android:layout_marginBottom="@dimen/fragment_settings_input_margin"
+                android:textSize="@dimen/fragment_payment_form_text_size"/>
 
         </LinearLayout>
     </ScrollView>

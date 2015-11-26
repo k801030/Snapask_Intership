@@ -7,4 +7,9 @@
     <string name="fragment.payment.start_date">Start Date</string>
     <string name="fragment.payment.end_date">End Date</string>
     <string name="fragment.payment.issue_number">Issue Number</string>
+
+    <string name="fragment.setting.notification">Notification</string>
+    <string name="fragment.setting.on">On</string>
+    <string name="fragment.setting.language">Language</string>
+    <string name="fragment.setting.english">English</string>
 </resources>
