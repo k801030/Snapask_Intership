@@ -35,7 +35,7 @@ public class InfoFragment extends Fragment {
 
     private class InfoAdapter extends BaseAdapter {
         private String[] TITLES = {"email", "phone", "university", "subjects"};
-        private int[] ICONS = {R.drawable.info_mail, R.drawable.info_mail, R.drawable.info_mail, R.drawable.info_mail};
+        private int[] ICONS = {R.drawable.info_mail, R.drawable.info_phone, R.drawable.info_university, R.drawable.info_subject};
 
         public InfoAdapter() {
             init();

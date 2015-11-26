@@ -57,7 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private class PagerAdapter extends FragmentPagerAdapter {
 
-        private String[] TITLES = {"Info", "Payment", "Settings"};
+        private String[] TITLES = {"Info", "Payment", "Setting"};
 
         public PagerAdapter(FragmentManager fm) {
             super(fm);
