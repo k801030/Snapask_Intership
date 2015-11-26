@@ -56,9 +56,15 @@ public class ProfileActivity extends AppCompatActivity {
                 ImageLoader.getInstance().displayImage(profile.getPhoto(), mUserPhoto);
 
                 // save data
-                Gson gson = new Gson();
-                String json = gson.toJson(profile);
-                mEditor.putString("USER_PROFILE", json);
+                mEditor.putString("email", profile.getEmail());
+                mEditor.putString("phone", profile.getPhone());
+                mEditor.putString("university", profile.getSchoolName());
+                String subject = profile.getSubjects()[0].getAbbr();
+                for (int j=1; j<profile.getSubjects().length; j++) {
+                    subject += ", ";
+                    subject += profile.getSubjects()[j].getAbbr();
+                }
+                mEditor.putString("subjects", subject);
                 mEditor.commit();
             }
 
