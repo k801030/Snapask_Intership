@@ -1,5 +1,7 @@
 package project.com.snapask.activity;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.google.gson.Gson;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -16,9 +19,12 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import org.w3c.dom.Text;
 
 import project.com.snapask.R;
+import project.com.snapask.api.ApiService;
+import project.com.snapask.api.GetProfileCallback;
 import project.com.snapask.fragment.InfoFragment;
 import project.com.snapask.fragment.PaymentFragment;
 import project.com.snapask.fragment.SettingsFragment;
+import project.com.snapask.model.UserProfile;
 
 public class ProfileActivity extends AppCompatActivity {
     RoundedImageView mUserPhoto;
@@ -28,11 +34,39 @@ public class ProfileActivity extends AppCompatActivity {
     ViewPager mViewPager;
     FragmentPagerAdapter mPagerAdapter;
 
+    ApiService mApiService;
+
+    SharedPreferences mSharedPreferences;
+    SharedPreferences.Editor mEditor;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mEditor = mSharedPreferences.edit();
+
+        mApiService = new ApiService(this);
+        mApiService.getUserProfile(new GetProfileCallback() {
+            @Override
+            public void onSuccess(UserProfile profile) {
+                mUserName.setText(profile.getName());
+                ImageLoader.getInstance().displayImage(profile.getPhoto(), mUserPhoto);
+
+                // save data
+                Gson gson = new Gson();
+                String json = gson.toJson(profile);
+                mEditor.putString("USER_PROFILE", json);
+                mEditor.commit();
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
 
 
         mUserPhoto = (RoundedImageView) findViewById(R.id.user_photo);
