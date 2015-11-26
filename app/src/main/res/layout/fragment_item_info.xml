@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fragment_item_info_padding"
             android:textSize="@dimen/fragment_info_text_size"
+            android:textColor="@color/main_text_color"
             android:text="kk801030@gmail.com" />
 
         <TextView
@@ -35,6 +36,7 @@
             android:gravity="right|center_vertical"
             android:textSize="@dimen/fragment_info_text_size"
             android:layout_margin="@dimen/fragment_item_info_padding"
+            android:textColor="@color/sub_text_color"
             android:text="Email" />
     </LinearLayout>
 

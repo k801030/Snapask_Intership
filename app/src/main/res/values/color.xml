@@ -6,4 +6,7 @@
     <color name="tab_text">#fff</color>
 
     <color name="horizontal_line">#30000000</color>
+
+    <color name="main_text_color">#333</color>
+    <color name="sub_text_color">#999</color>
 </resources>

@@ -6,7 +6,9 @@
     <dimen name="fragment_item_info_padding">16dp</dimen>
     <dimen name="fragment_payment_margin">16dp</dimen>
     <dimen name="fragment_payment_form_padding">6dp</dimen>
+    <dimen name="fragment_settings_margin">16dp</dimen>
 
     <dimen name="fragment_info_text_size">16sp</dimen>
     <dimen name="tab_text_size">16sp</dimen>
+
 </resources>
